@@ -1,15 +1,15 @@
-import { component$, useStore, useClientEffect$, Slot } from '@builder.io/qwik';
+import { component$, useStore, useClientEffect$, Slot } from "@builder.io/qwik";
 
 const Button = component$(() => {
-  const store = useStore({count: 0});
+  const store = useStore({ count: 0 });
 
   useClientEffect$(() => {
-    console.log('mounted');
-  })
+    console.log("mounted");
+  });
 
   return (
-    <button type={'button'} onClick$={() => store.count++}>
-      <Slot/>
+    <button type={"button"} onClick$={() => store.count++}>
+      <Slot />
       <span>:{store.count}</span>
     </button>
   );
