@@ -6,19 +6,19 @@ export default component$(() => {
   return (
     <div>
       <div class={"button-wrapper"}>
-        <Button>Hello!</Button>
+        <Button name={"first"}>Hello first!</Button>
       </div>
       <div className={"button-wrapper"}>
-        <Button>Hello!</Button>
+        <Button name={"second"}>Hello second!</Button>
       </div>
       <div className={"button-wrapper"}>
-        <Button>Hello!</Button>
+        <Button name={"third"}>Hello third!</Button>
       </div>
       <div className={"button-wrapper"}>
-        <Button>Hello!</Button>
+        <Button name={"4th"}>Hello 4th!</Button>
       </div>
       <div className={"button-wrapper"}>
-        <Button>automatic lazy loading</Button>
+        <Button name={"last"}>automatic lazy loading</Button>
       </div>
     </div>
   );
