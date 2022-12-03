@@ -6,7 +6,9 @@ import {
   useMount$,
   useServerMount$,
   useClientMount$,
+  useStyles$,
 } from "@builder.io/qwik";
+import style from "./style.css?inline";
 
 type ButtonProps = {
   name: string;
@@ -14,6 +16,7 @@ type ButtonProps = {
 
 const Button = component$(({ name }: ButtonProps) => {
   const store = useStore({ count: 0 });
+  useStyles$(style);
 
   useMount$(() => {
     console.log("mount:" + name);
@@ -55,7 +58,7 @@ const Button = component$(({ name }: ButtonProps) => {
   );
 
   return (
-    <button type={"button"} onClick$={() => store.count++}>
+    <button type={"button"} class={"my-button"} onClick$={() => store.count++}>
       <Slot />
       <span>:{store.count}</span>
     </button>

@@ -5,6 +5,7 @@ import Button from "~/components/Button";
 export default component$(() => {
   return (
     <div>
+      <div style={{ height: "100vh" }} />
       <div class={"button-wrapper"}>
         <Button name={"first"}>Hello first!</Button>
       </div>
